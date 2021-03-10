@@ -35,3 +35,4 @@ li a:hover {
 - [Tutorial4](Tutorial4.html) 
 - [Tutorial5](Tutorial5.html) 
 - [Tutorial6](Tutorial6.html) 
+- [Tutorial7](Tutorial7.html) 
