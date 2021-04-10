@@ -29,7 +29,8 @@ li a:hover {
 </style>
 
 # Discplina de Computação Gráfica
-- [Inspiração](inspiração.html)
+- [Imagem Inspiração](inspiração.html)
+- [Imagem do Jogo Inspiração](inspiraçãoJogo.html)
 - [Tutorial1](Tutorial1.html) 
 - [Tutorial3](Tutorial3.html) 
 - [Tutorial4](Tutorial4.html) 
