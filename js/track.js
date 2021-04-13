@@ -86,6 +86,7 @@ AFRAME.registerComponent("track", {
     this.dialog.setAttribute("scale", {x:5, y:5, z:5});
     this.el.appendChild(this.dialog);
 
+    
     let button = document.createElement("a-entity");
     button.setAttribute("button", "");
     this.el.appendChild(button);
