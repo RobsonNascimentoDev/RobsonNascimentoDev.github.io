@@ -2,7 +2,7 @@
 <html>
 
 <head>
- 
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -11,7 +11,7 @@
     gtag('config', 'UA-152966101-1');
   </script>
   <meta charset="utf-8">
-  <title>Flappy Bird</title>
+  <title>Galaxy Flappy Bird</title>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="./js/pipe.js"></script>
   <script src="./js/player.js"></script>
@@ -19,13 +19,21 @@
 </head>
 
 <body>
+  <a-scene renderer="highRefreshRate:false;">
 
-  <a-scene renderer="highRefreshRate:false;" fog="type:linear;color:#d7a84d; density:0.05; near:0; far:100;">
+    <a-assets>
+      <img id="groundTexture" src="./img/stars.jpg">
+      <img id="skyTexture" src="./img/milkway.png">
+    </a-assets>
+
+
     <a-entity light="type:ambient; color:#d8d8d8"></a-entity>
     <a-entity light="type:directional; ccastShadow:true; color:#FFF; intensity:0.6;" position="-0.5 1 1"></a-entity>
 
-    <a-plane material="flatShading:true;" shadow="cast:false; receive:true;" roughness="1" height="300" width="300"
-      position="0 -8 0" rotation="-90 0 0" repeat="30 30"></a-plane>
+    <a-sky material="fog:false;" src="#skyTexture" repeat="5"></a-sky>
+    <a-plane src="#groundTexture" material="flatShading:true;" shadow="cast:false; receive:true;" roughness="1"
+      height="250" width="250" position="0 -8 0" rotation="-90 0 0" repeat="4 4"></a-plane>
+
     <a-entity track="pipes:14; radius:50; speed:0.1; jump:0.13; gravity:-0.003; gap:5;"></a-entity>
   </a-scene>
 
