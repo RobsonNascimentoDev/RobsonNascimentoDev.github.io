@@ -9,7 +9,9 @@ AFRAME.registerComponent("button", {
         }
       });
       window.addEventListener("click", function (evt) {
+        if (evt.target != el) {
           el.emit("click", evt, true);
+        }
       });
     }
   });
