@@ -38,4 +38,4 @@ li a:hover {
 - [Tutorial 6](Tutorial6.html)
 - [Tutorial 7](Tutorial7.html) 
 - [Trabalho 1](Trabalho1.html)
-- [Trabalho Final - Tiro ao Alvo](Trabalho2Fase1.html)
+- [Trabalho Final - Acerte as Bolinhas](Trabalho2Fase1.html)

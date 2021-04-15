@@ -18,11 +18,16 @@ const colisao = event => {
     if (event.detail.body.el.id === 'floor') {
         console.log("Não colidiu");
         event.detail.target.el.removeEventListener('collide', colisao);
+        //apaga pra não entrar no if toda hr
+        cena.removeChild(event.detail.target.el);
     } else if (event.detail.body.el.className === 'target') {
         console.log("coolidiu")
+        event.detail.target.el.removeEventListener('collide', colisao);
+        //remove da cena o alvo atingido
+        cena.removeChild(event.detail.target.el);
+        cena.removeChild(event.detail.body.el);
     }
 };
-
 document.onkeydown = event => {
     if (event.which == 32) {
         lancarBolinha();
