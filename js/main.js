@@ -10,6 +10,7 @@ const lancarBolinha = () => {
     bolinhas.setAttribute("radius", 0.5);
     bolinhas.setAttribute("src", "img");
     cena.appendChild(bolinhas);
+    bolinhas.addEventListener('collide', colisao)
 };
 
 //colisão com o alvo
@@ -26,6 +27,10 @@ const colisao = event => {
         //remove da cena o alvo atingido
         cena.removeChild(event.detail.target.el);
         cena.removeChild(event.detail.body.el);
+    }
+    // Verifica se ainda existem alvos
+    if (document.querySelectorAll('.target').length === 0) {
+        console.log('Acabou os alvos');
     }
 };
 document.onkeydown = event => {
