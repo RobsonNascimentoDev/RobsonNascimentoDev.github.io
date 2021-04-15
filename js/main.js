@@ -18,7 +18,7 @@ const colisao = event => {
     if (event.detail.body.el.id === 'floor') {
         console.log("Não colidiu");
         event.detail.target.el.removeEventListener('collide', colisao);
-    } else if (event.detail.body.el.id === 'target') {
+    } else if (event.detail.body.el.className === 'target') {
         console.log("coolidiu")
     }
 };
