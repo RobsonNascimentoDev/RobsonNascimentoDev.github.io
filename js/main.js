@@ -10,11 +10,21 @@ const lancarBolinha = () => {
     bolinhas.setAttribute("radius", 0.5);
     bolinhas.setAttribute("src", "img");
     cena.appendChild(bolinhas);
-  };
-  
-  document.onkeydown = event => {
+};
+
+//colisão com o alvo
+const colisao = event => {
+    console.log('Chegou!!');
+    if (event.detail.body.el.id === 'floor') {
+        console.log("Não colidiu");
+        event.detail.target.el.removeEventListener('collide', colisao);
+    } else if (event.detail.body.el.id === 'target') {
+        console.log("coolidiu")
+    }
+};
+
+document.onkeydown = event => {
     if (event.which == 32) {
-      lancarBolinha();
-    } 
-  };
-  
+        lancarBolinha();
+    }
+};
