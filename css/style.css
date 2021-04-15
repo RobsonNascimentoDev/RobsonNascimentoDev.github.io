@@ -46,4 +46,8 @@
     padding: 10px 15px;
   }
 
+  .title{
+      display: flex;
+      flex-direction: column;
+  }
   }
