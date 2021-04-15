@@ -10,31 +10,32 @@ const lancarBolinha = () => {
     bolinhas.setAttribute("radius", 0.5);
     bolinhas.setAttribute("src", "img");
     cena.appendChild(bolinhas);
-    bolinhas.addEventListener('collide', colisao)
-};
-
-//colisão com o alvo
-const colisao = event => {
-    console.log('Chegou!!');
+    bolinhas.addEventListener('collide', colisao);
+  };
+  
+  //colisão com o alvo
+  const colisao = event =>{
     if (event.detail.body.el.id === 'floor') {
-        console.log("Não colidiu");
-        event.detail.target.el.removeEventListener('collide', colisao);
-        //apaga pra não entrar no if toda hr
-        cena.removeChild(event.detail.target.el);
-    } else if (event.detail.body.el.className === 'target') {
-        console.log("coolidiu")
-        event.detail.target.el.removeEventListener('collide', colisao);
-        //remove da cena o alvo atingido
-        cena.removeChild(event.detail.target.el);
-        cena.removeChild(event.detail.body.el);
+      console.log("Não colidiu");
+      event.detail.target.el.removeEventListener('collide', colisao);
+      //apaga pra não entrar no if toda hr
+      cena.removeChild(event.detail.target.el);
+    } else if (event.detail.body.el.className === 'target'){
+      console.log("coolidiu")
+      event.detail.target.el.removeEventListener('collide', colisao);
+      //remove da cena o alvo atingido
+      cena.removeChild(event.detail.target.el);
+      cena.removeChild(event.detail.body.el);
     }
     // Verifica se ainda existem alvos
-    if (document.querySelectorAll('.target').length === 0) {
-        console.log('Acabou os alvos');
+    if(document.querySelectorAll('.target').length === 0){
+      console.log('Acabou os alvos');
     }
-};
-document.onkeydown = event => {
+  };
+  
+  document.onkeydown = event => {
     if (event.which == 32) {
-        lancarBolinha();
-    }
-};
+      lancarBolinha();
+    } 
+  };
+  
