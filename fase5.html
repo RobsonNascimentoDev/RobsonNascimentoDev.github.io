@@ -14,12 +14,12 @@
   <div data-modal-target="#modal"></div>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Level 4 - Egito</div>
+      <div class="title">Level Final - Larvas de Vulcão</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-      Neste level, para chegar no Level Final, o jogador deverar
-      acertar as 9 bolinhas que existem no Egito.<br>
+      No Level Final, o jogador deverar
+      acertar as 12 bolinhas que existem no Vulcão.<br>
       Aviso: Pode ser Necessário Se Aproximar do Alvo!!!
       <div class="boaSorte">Boa Sorte!</div>
       <div class="informacao">
@@ -60,7 +60,7 @@
     <a-entity id="audio-player"  sound_aplausos="src: #aplausos"></a-entity> -->
 
     <!-- COnfiguração Inicial do Cenário -->
-    <a-entity environment="preset:egypt;"></a-entity>
+    <a-entity environment="preset:volcano;"></a-entity>
     <!--  -->
     <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="black" rotation="-90 0 0">
     </a-plane>
@@ -71,13 +71,16 @@
     <!-- Criação do Alvo -->
     <a-icosahedron static-body class="target" color="green" radius="1" position="5 4 -5"></a-icosahedron>
     <a-icosahedron static-body class="target" color="green" radius="1" position="-4 2 -4"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="1" position="-2 1 -10"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="1" position="-1 3 -10"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="1" position="0 5 -8"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="2" position="2 1 -4"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="2" position="-3 2 -4"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="2" position="-4 10 -4"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="green" radius="1" position="3 3 -7"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="yellow" radius="1" position="1 1 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="yellow" radius="1" position="-2 1 -10"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="black" radius="1" position="1 2 -8"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="black" radius="1" position="3 5 -6"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="blue" radius="1" position="-1 3 -10"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="blue" radius="1" position="0 5 -8"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="purple" radius="2" position="2 1 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="purple" radius="2" position="-3 2 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="white" radius="2" position="-4 10 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="white" radius="1" position="3 3 -7"></a-icosahedron>
   </a-scene>
 </body>
 <script src="./js/tiro.js"></script>
