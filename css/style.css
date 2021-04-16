@@ -60,13 +60,18 @@
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-top: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: large;
     color: white;
     background-color: green;
     height: auto;
+  }
+
+  .informacao{
+    font-size: small;
+    font-weight: bold;
+    margin-top: 10%;
   }
 
   
