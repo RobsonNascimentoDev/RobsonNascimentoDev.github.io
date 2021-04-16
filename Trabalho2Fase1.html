@@ -19,7 +19,8 @@
     </div>
     <div class="modal-body">
       Neste level, para chegar no Level 2, o jogador deverar
-      acertar as 3 bolinhas que existem na Galáxia.
+      acertar as 3 bolinhas que existem na Galáxia.<br>
+      Dica: Pode ser Necessário Aproximar do Alvo!!
       <div class="boaSorte">Boa Sorte!</div>
       <div class="informacao">
         <lo>
@@ -48,8 +49,9 @@
       <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
     </a-camera>
     <!-- Criação do Alvo -->
-    <a-icosahedron static-body class="target" color="yellow" radius="1" position="0 3 -5"></a-icosahedron>
-    <!-- <a-icosahedron static-body class="target" color="yellow" radius="1" position="-1 1 -10"></a-icosahedron> -->
+    <a-icosahedron static-body class="target" color="yellow" radius="1" position="5 3 -5"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="yellow" radius="3" position="-5 3 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="yellow" radius="2" position="-1 3 -10"></a-icosahedron>
   </a-scene>
 </body>
 <script src="./js/tiro.js"></script>

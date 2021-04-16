@@ -5,7 +5,7 @@ const lancarBolinha = () => {
   //Atributos da posição inicial da camera
   let posicao = myCamera.getAttribute("position");
   bolinhas.setAttribute("position", posicao);
-  bolinhas.setAttribute("velocity", getDirection(myCamera, 10));
+  bolinhas.setAttribute("velocity", getDirection(myCamera, 20));
   bolinhas.setAttribute("dynamic-body", false);
   bolinhas.setAttribute("radius", 0.5);
   bolinhas.setAttribute("src", "img");
