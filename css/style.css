@@ -34,12 +34,6 @@
     margin-bottom: 3%;
 }
 
-  
-  .modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-
 
 .close-button{
   color: #fafafa;
@@ -72,6 +66,14 @@
     font-size: small;
     font-weight: bold;
     margin-top: 10%;
+  }
+
+  .boaSorte{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-weight: bold;
+    margin-top: 2%;
   }
 
   
