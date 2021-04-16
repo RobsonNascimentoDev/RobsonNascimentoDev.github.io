@@ -1,8 +1,9 @@
+let proximaFase = 'fase2.html';
 //Documentação Aframe - Uso de Áudio
 // var entity = document.querySelector('[sound]');
 // var disparos = document.querySelector('[sound1]');
-var audioPlayer;
-audioPlayer = document.querySelector('#audio-player');
+
+var audioPlayer = document.querySelector('#audio-player');
 
 // Função Para Criar Lançamento das Bolas
 const lancarBolinha = () => {
@@ -44,6 +45,7 @@ const colisao = event => {
   if (document.querySelectorAll('.target').length === 0) {
     console.log('Acabou os alvos');
     audioPlayer.components['sound__aplausos'].playSound();
+    esperaAplausos();
   }
 };
 
@@ -51,4 +53,18 @@ document.onkeydown = event => {
   if (event.which == 32) {
     lancarBolinha();
   }
+};
+
+function espera() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, 2000);
+  });
+};
+
+async function esperaAplausos() {
+  await espera();
+  location.href = proximaFase;
+  
 };

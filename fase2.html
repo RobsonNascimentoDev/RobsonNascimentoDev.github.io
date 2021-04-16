@@ -14,13 +14,13 @@
   <div data-modal-target="#modal"></div>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Level 1 - Galáxia</div>
+      <div class="title">Level 2 - Bolinhas nos Barrancos</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-      Neste level, para chegar no Level 2, o jogador deverar
-      acertar as 3 bolinhas que existem na Galáxia.<br>
-      Dica: Pode ser Necessário Aproximar do Alvo!!
+      Neste level, para chegar no Level 3, o jogador deverar
+      acertar as 5 bolinhas que existem nos Barrancos.<br>
+      Aviso: Pode ser Necessário Se Aproximar do Alvo!!! 
       <div class="boaSorte">Boa Sorte!</div>
       <div class="informacao">
         <lo>
@@ -28,7 +28,7 @@
             Mover -> Setas e Letras (W, S, A, D)
           </li>
           <li>
-            Disparo -> Espaço 
+            Disparo -> Espaço
           </li>
           <li>
             Mira -> Mouse
@@ -38,27 +38,29 @@
       <button data-start-button class="start-button">Iniciar</button>
     </div>
   </div>
+
   <a-scene id="cena">
+    <a-text value="Now Interactable" geometry="primitive:plane"></a-text>
     <!-- Efeitos Sonoros -->
     <a-assets>
-      <audio id="menuSound" preload="metadata" src="audio/menu.mp3" ></audio>
+      <audio id="menuSound" preload="metadata" src="audio/menu.mp3"></audio>
       <audio id="disparosSound" preload="metadata" src="audio/disparos.mp3"></audio>
       <audio id="aplausosSound" preload="metadata" src="audio/aplausos.mp3"></audio>
     </a-assets>
-    <!-- <a-entity sound="src: #river"></a-entity> -->
     <a-entity id="audio-player"
       sound__menu="src: #menuSound; positional: false; poolSize: 3"
       sound__disparos="src: #disparosSound; positional: false;"
       sound__aplausos="src: #aplausosSound; positional: false;"
       >
     </a-entity>
-    
+
     <!-- <a-entity id="audio-menu" sound="src: #menu"></a-entity> -->
     <!-- <a-entity id="audio-disparos" sound1="src: #disparos"></a-entity>  -->
     <!-- <a-entity id="audio-player"  sound_acertouAlvo="src: #acertouAlvo"></a-entity>
     <a-entity id="audio-player"  sound_aplausos="src: #aplausos"></a-entity> -->
+
     <!-- COnfiguração Inicial do Cenário -->
-    <a-entity environment="preset:starry;"></a-entity>
+    <a-entity environment="preset:goldmine;"></a-entity>
     <!--  -->
     <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="black" rotation="-90 0 0">
     </a-plane>
@@ -67,14 +69,15 @@
       <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
     </a-camera>
     <!-- Criação do Alvo -->
-    <a-icosahedron static-body class="target" color="yellow" radius="1" position="5 3 -5"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="yellow" radius="3" position="-5 3 -4"></a-icosahedron>
-    <a-icosahedron static-body class="target" color="yellow" radius="2" position="-1 3 -10"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="red" radius="1" position="5 3 -5"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="red" radius="3" position="-5 3 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="red" radius="2" position="-1 3 -10"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="red" radius="1" position="-4 2 -4"></a-icosahedron>
+    <a-icosahedron static-body class="target" color="red" radius="1" position="-2 1 -9"></a-icosahedron>
   </a-scene>
 </body>
 <script src="./js/tiro.js"></script>
 <script src="./js/main.js"></script>
 <link href="./css/style.css" rel="stylesheet">
-<script defer src="./js/modal.js"></script>
-<script> proximaFase = 'fase2.html';</script>
+<script src="./js/modal.js"></script>
 </html>
