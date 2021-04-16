@@ -4,7 +4,7 @@
 <head>
   <!-- Versão Aframe -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> -->
   <!-- Física envolvida nas colisões -->
   <script src="https://codechangers.com/physics.js"></script>
 
@@ -14,29 +14,9 @@
   <div data-modal-target="#modal"></div>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Level Final - Larvas de Vulcão</div>
-      <button data-close-button class="close-button">&times;</button>
+      <div class="title"> <div style="display: flex; flex-direction: column; align-self: center;">Parabéns!!!</div> <br> Você Zerou o "Acerte as Bolinhas"</div>
     </div>
-    <div class="modal-body">
-      No Level Final, o jogador deverar
-      acertar as 12 bolinhas que existem no Vulcão.<br>
-      Aviso: Pode ser Necessário Se Aproximar do Alvo!!!
-      <div class="boaSorte">Boa Sorte!</div>
-      <div class="informacao">
-        <lo>
-          <li>
-            Mover -> Setas e Letras (W, S, A, D)
-          </li>
-          <li>
-            Disparo -> Espaço
-          </li>
-          <li>
-            Mira -> Mouse
-          </li>
-        </lo>
-      </div>
-      <button data-start-button class="start-button">Iniciar</button>
-    </div>
+  
   </div>
 
   <a-scene id="cena">
@@ -84,8 +64,7 @@
   </a-scene>
 </body>
 <script src="./js/tiro.js"></script>
-<script src="./js/main.js"></script>
+<script src="./js/script.js"></script>
 <link href="./css/style.css" rel="stylesheet">
 <script src="./js/modal.js"></script>
-<script> proximaFase = 'Agradecimento.html';</script>
 </html>
