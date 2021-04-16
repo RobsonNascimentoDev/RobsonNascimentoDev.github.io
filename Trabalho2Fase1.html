@@ -41,9 +41,22 @@
   <a-scene id="cena">
     <!-- Efeitos Sonoros -->
     <a-assets>
-      <audio id="river" src="audio/menu.mp3" preload="metadata"></audio>
+      <audio id="menuSound" preload="metadata" src="audio/menu.mp3" ></audio>
+      <audio id="disparosSound" preload="metadata" src="audio/disparos.mp3"></audio>
+      <audio id="aplausosSound" preload="metadata" src="audio/aplausos.mp3"></audio>
     </a-assets>
-    <a-entity sound="src: #river"></a-entity>
+    <!-- <a-entity sound="src: #river"></a-entity> -->
+    <a-entity id="audio-player"
+      sound__menu="src: #menuSound; positional: false; poolSize: 3"
+      sound__disparos="src: #disparosSound; positional: false;"
+      sound__aplausos="src: #aplausosSound; positional: false;"
+      >
+    </a-entity>
+    
+    <!-- <a-entity id="audio-menu" sound="src: #menu"></a-entity> -->
+    <!-- <a-entity id="audio-disparos" sound1="src: #disparos"></a-entity>  -->
+    <!-- <a-entity id="audio-player"  sound_acertouAlvo="src: #acertouAlvo"></a-entity>
+    <a-entity id="audio-player"  sound_aplausos="src: #aplausos"></a-entity> -->
     <!-- COnfiguração Inicial do Cenário -->
     <a-entity environment="preset:starry;"></a-entity>
     <!--  -->

@@ -1,5 +1,9 @@
 //Documentação Aframe - Uso de Áudio
-var entity = document.querySelector('[sound]');
+// var entity = document.querySelector('[sound]');
+// var disparos = document.querySelector('[sound1]');
+var audioPlayer;
+audioPlayer = document.querySelector('#audio-player');
+
 // Função Para Criar Lançamento das Bolas
 const lancarBolinha = () => {
   // Bolinhas dos Disparos
@@ -12,6 +16,8 @@ const lancarBolinha = () => {
   bolinhas.setAttribute("radius", 0.5);
   bolinhas.setAttribute("src", "img");
   cena.appendChild(bolinhas);
+  audioPlayer.components['sound__disparos'].playSound();
+  // disparos.components.sound.playSound();
   bolinhas.addEventListener('collide', colisao);
 };
 
@@ -24,7 +30,11 @@ const colisao = event => {
     cena.removeChild(event.detail.target.el);
   } else if (event.detail.body.el.className === 'target') {
     console.log("coolidiu")
-    entity.components.sound.playSound();
+    audioPlayer.components['sound__menu'].playSound();
+    // entity.components['sound_menu'].playSound();
+    // menu.components.sound.playSound();
+    // audioPlayer.components.sound_menu.playSound();
+    // entity.components.sound.playSound();
     event.detail.target.el.removeEventListener('collide', colisao);
     //remove da cena o alvo atingido
     cena.removeChild(event.detail.target.el);
@@ -33,6 +43,7 @@ const colisao = event => {
   // Verifica se ainda existem alvos
   if (document.querySelectorAll('.target').length === 0) {
     console.log('Acabou os alvos');
+    audioPlayer.components['sound__aplausos'].playSound();
   }
 };
 
