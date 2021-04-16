@@ -1,3 +1,5 @@
+//Documentação Aframe - Uso de Áudio
+var entity = document.querySelector('[sound]');
 // Função Para Criar Lançamento das Bolas
 const lancarBolinha = () => {
   // Bolinhas dos Disparos
@@ -22,6 +24,7 @@ const colisao = event => {
     cena.removeChild(event.detail.target.el);
   } else if (event.detail.body.el.className === 'target') {
     console.log("coolidiu")
+    entity.components.sound.playSound();
     event.detail.target.el.removeEventListener('collide', colisao);
     //remove da cena o alvo atingido
     cena.removeChild(event.detail.target.el);

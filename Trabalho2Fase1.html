@@ -39,6 +39,11 @@
     </div>
   </div>
   <a-scene async id="cena">
+    <!-- Efeitos Sonoros -->
+    <a-assets>
+      <audio id="river" src="audio/menu.mp3" preload="auto"></audio>
+    </a-assets>
+    <a-entity sound="src: #river"></a-entity>
     <!-- COnfiguração Inicial do Cenário -->
     <a-entity environment="preset:starry;"></a-entity>
     <!--  -->
